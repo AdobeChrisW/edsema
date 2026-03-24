@@ -1,47 +1,52 @@
+/* Hero CTA Block - Full-width dark background section */
+.hero-cta-container {
+  background-color: var(--color-black);
+}
+
 .hero-cta-container .hero-cta-wrapper {
-  max-width: unset;
-  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
 }
 
 .hero-cta {
-  position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  color: var(--color-white);
 }
 
-.hero-cta h1,
-.hero-cta h2,
-.hero-cta h3,
-.hero-cta h4,
-.hero-cta h5,
-.hero-cta h6,
-.hero-cta p {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+.hero-cta .hero-cta-image {
+  display: none;
 }
 
-.hero-cta.no-image * {
-  color: var(--text-color);
+.hero-cta .hero-cta-content h1,
+.hero-cta .hero-cta-content h2,
+.hero-cta .hero-cta-content h3,
+.hero-cta .hero-cta-content h4,
+.hero-cta .hero-cta-content h5,
+.hero-cta .hero-cta-content h6 {
+  color: var(--color-white);
 }
 
-.hero-cta picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+.hero-cta .hero-cta-content p {
+  color: var(--color-gray-300);
+  line-height: 1.6;
 }
 
-.hero-cta img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+.hero-cta a.button {
+  background-color: var(--color-white);
+  border-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.hero-cta a.button:hover {
+  box-shadow: 6px 6px 0 0 rgb(255 255 255 / 30%);
 }
 
 @media (width >= 900px) {
-  .hero-cta {
-    padding: 40px 32px;
+  .hero-cta-container .hero-cta-wrapper {
+    padding: 0 32px;
+  }
+
+  .hero-cta .hero-cta-content {
+    max-width: 600px;
   }
 }

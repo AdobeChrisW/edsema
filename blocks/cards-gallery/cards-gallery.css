@@ -1,19 +1,26 @@
+/* Cards Gallery Block - Image grid */
 .cards-gallery > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+@media (width >= 900px) {
+  .cards-gallery > ul {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xl);
+  }
 }
 
 .cards-gallery > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+  overflow: hidden;
 }
 
 .cards-gallery .cards-gallery-card-body {
-  margin: 16px;
+  display: none;
 }
 
 .cards-gallery .cards-gallery-card-image {
@@ -22,6 +29,12 @@
 
 .cards-gallery > ul > li img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
+  border-radius: var(--radius-card);
+  transition: transform var(--transition-normal);
+}
+
+.cards-gallery > ul > li:hover img {
+  transform: scale(1.03);
 }
