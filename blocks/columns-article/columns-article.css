@@ -1,3 +1,4 @@
+/* Columns Article Block */
 .columns-article > div {
   display: flex;
   flex-direction: column;
@@ -5,6 +6,8 @@
 
 .columns-article img {
   width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .columns-article > div > div {
@@ -19,15 +22,31 @@
   display: block;
 }
 
+/* Breadcrumb-style links */
+.columns-article > div > div:not(.columns-article-img-col) p:first-child a {
+  font-size: var(--body-font-size-s);
+  color: var(--text-color-secondary);
+}
+
+/* Meta info (author, date) */
+.columns-article > div > div:not(.columns-article-img-col) p:nth-child(n+3) {
+  font-size: var(--body-font-size-s);
+  color: var(--text-color-secondary);
+}
+
 @media (width >= 900px) {
   .columns-article > div {
     align-items: center;
     flex-direction: unset;
-    gap: 24px;
+    gap: var(--space-2xl);
   }
 
   .columns-article > div > div {
     flex: 1;
     order: unset;
+  }
+
+  .columns-article > div > .columns-article-img-col img {
+    border-radius: var(--radius-lg);
   }
 }
