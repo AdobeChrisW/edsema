@@ -1,5 +1,8 @@
 import { toClassName } from '../../scripts/aem.js';
 
+/**
+ * Tabs Testimonial Block
+ */
 export default async function decorate(block) {
   const tablist = document.createElement('div');
   tablist.className = 'tabs-testimonial-list';

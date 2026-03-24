@@ -1,5 +1,8 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
+/**
+ * Cards Article Block
+ */
 export default function decorate(block) {
   const ul = document.createElement('ul');
   [...block.children].forEach((row) => {

@@ -1,7 +1,6 @@
-/*
+/**
  * Accordion FAQ Block
  */
-
 export default function decorate(block) {
   [...block.children].forEach((row) => {
     const label = row.children[0];
